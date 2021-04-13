@@ -7,6 +7,7 @@ import NotFound from './components/NotFound';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import MovieForm from './components/MovieForm';
+import LoginForm from './components/LoginForm';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
       <NavBar />
       <main className="container">
         <Switch>
+          <Route path="/login" component={ LoginForm } />
           <Route path="/movies/:id" component={ MovieForm } />
           <Route path="/movies" component={ Movies }></Route>
           <Route path="/customers" component={ Customers }></Route>
